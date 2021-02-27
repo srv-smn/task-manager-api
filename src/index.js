@@ -6,6 +6,17 @@ const taskRouter = require('./routers/task')
 const app = express()
 const port = process.env.PORT || 3000
 
+// app.use((req, res, next)=>{
+//     if(req.method === 'GET'){
+//         res.send("Get Request are disabled")
+//     } else {
+//         next()
+//     }
+// })
+
+// app.use((req,res,next) =>{
+//     res.status(503).send("Server under maintenance")
+// })
 
 app.use(express.json())
 app.use(userRouter)
@@ -15,4 +26,4 @@ app.listen(port, ()=>{
     console.log("Server is up on port "+port);
 }) 
 
-//now vid 5
+//now vid 8
