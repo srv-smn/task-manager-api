@@ -1,5 +1,6 @@
 const express = require('express')
 const router = new express.Router()
+const multer = require('multer')
 const auth = require('../middleware/auth')
 const Task = require('../models/task')
 
@@ -103,7 +104,5 @@ router.delete('/tasks/:id',auth,async (req,res)=>{
         res.status(500).send(e)
     }
 })
-
-
 
 module.exports = router
